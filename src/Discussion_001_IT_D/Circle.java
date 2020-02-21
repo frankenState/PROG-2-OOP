@@ -1,0 +1,49 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Discussion_001_IT_D;
+
+/**
+ *
+ * @author frank lou
+ */
+public class Circle {
+
+    /**
+     * @return the radius
+     */
+    public double getRadius() {
+        return radius;
+    }
+
+    /**
+     * @param radius the radius to set
+     */
+    public void setRadius(double radius) {
+        this.radius = radius;
+    }
+    
+    public double getArea(){
+        double area = Math.PI * Math.pow(this.radius, 2);
+        return area;
+    }
+    public boolean equalTo(Circle circle){
+        return this.getArea() == circle.getArea();
+    }
+    
+    // Constructor
+    public Circle(double radius){
+        this.radius = radius;
+        objCnt++;
+    }
+    
+    public Circle(){
+        this(0);
+    }
+    
+    // Properties
+    private double radius;
+    public static int objCnt = 0;
+}
